@@ -16,22 +16,32 @@ namespace Mission2
             Console.WriteLine("Each '*' represents 1% of the total number of rolls.");
             Console.WriteLine("Total number of rolls = " + rollCount);
 
-            int rollrandom = new Random(); //trying to decide where to put this
-
+            // the user sets the number of rolls total to be made, turn it into an integer
+            // need to roll the total amount of times given by the user 
+            // assign each roll a random number for each dice 
+            // combine the total of the dice
+            // keep count of each roll's sum option in an array
+            // print lines for each sum option number, a * for each 1% of the total rolls
+            
             int rolls = int.Parse(rollCount); //turn the roll input into an integer
+
+            Random rnd = new Random();
 
             for ( int r = 0; r < rolls; r++) //set up a for loop that starts with the first roll and stops at the roll count given by the user
             {
+                int Dice1 = rnd.Next(1, 7);
+                int Dice2 = rnd.Next(1, 7);
+                int RollTotal = Dice1 + Dice2;
 
                 //need to set up another for loop that has an array which will add an asterik to the correct number for each time it is hit
 
 
             }
 
+            Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!")
 
 
-
-        }
+            }
 
         private static void PrintName(string rollCount)
         {
