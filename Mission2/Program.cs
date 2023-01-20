@@ -9,13 +9,15 @@ namespace Mission2
 
             string rollCount = "";
 
-            Console.Write("Welcome to the dice throwing simulator! " + "How many dice rolls would you like to simulate?");
+            Console.Write("Welcome to the dice throwing simulator! ");
+            Console.WriteLine(); //this is the only way I could find to make a line break so it looks cleaner
+            Console.Write( "How many dice rolls would you like to simulate?  ");
             rollCount = Console.ReadLine();
-
+            Console.WriteLine();
             Console.WriteLine("DICE ROLLING SIMULATION RESULTS");
             Console.WriteLine("Each '*' represents 1% of the total number of rolls.");
             Console.WriteLine("Total number of rolls = " + rollCount);
-
+            Console.WriteLine();
             // the user sets the number of rolls total to be made, turn it into an integer
             // need to roll the total amount of times given by the user 
             // assign each roll a random number for each dice 
@@ -44,7 +46,7 @@ namespace Mission2
 
             //need to set up another for loop that has an array which will add an asterik to the correct number for each time it is hit
 
-
+            Console.WriteLine();
             Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
 
 
