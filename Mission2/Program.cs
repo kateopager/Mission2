@@ -22,26 +22,33 @@ namespace Mission2
             // combine the total of the dice
             // keep count of each roll's sum option in an array
             // print lines for each sum option number, a * for each 1% of the total rolls
-            
-            int rolls = int.Parse(rollCount); //turn the roll input into an integer
 
-            Random rnd = new Random();
+            int rolls = int.Parse(rollCount); //turn the roll input into an integer so that it can be used in loop counting
 
-            for ( int r = 0; r < rolls; r++) //set up a for loop that starts with the first roll and stops at the roll count given by the user
+            Random rnd = new Random(); // declare a random variable class which will be called later
+
+            int[] sumrolls = new int[11]; //create an array that will hold the 11 possible values from the dice (numbers 2-12)
+
+            for (int r = 0; r < rolls; r++) //set up a for loop that starts with the first roll and stops at the roll count given by the user
             {
-                int Dice1 = rnd.Next(1, 7);
+                int Dice1 = rnd.Next(1, 7); //roll each dice by using the random number generator
                 int Dice2 = rnd.Next(1, 7);
-                int RollTotal = Dice1 + Dice2;
+                int RollTotal = Dice1 + Dice2; //we are using the sum of the die so we need to add them up
 
-                //need to set up another for loop that has an array which will add an asterik to the correct number for each time it is hit
-
-
+                sumrolls[RollTotal]++; //put the roll total in the array spot
             }
+            for (int i = 0; i < 12; i++) //this will print out the results from the array to the user
+            {
+                Console.WriteLine((i + 1) + " : " + sumrolls[i]);
+            }
+
+            //need to set up another for loop that has an array which will add an asterik to the correct number for each time it is hit
+
 
             Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!")
 
 
-            }
+        }
 
         private static void PrintName(string rollCount)
         {
