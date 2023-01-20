@@ -27,7 +27,7 @@ namespace Mission2
 
             Random rnd = new Random(); // declare a random variable class which will be called later
 
-            int[] sumrolls = new int[11]; //create an array that will hold the 11 possible values from the dice (numbers 2-12)
+            int[] sumrolls = new int[13]; //create an array that will hold the 11 possible values from the dice (numbers 2-12)
 
             for (int r = 0; r < rolls; r++) //set up a for loop that starts with the first roll and stops at the roll count given by the user
             {
@@ -37,7 +37,7 @@ namespace Mission2
 
                 sumrolls[RollTotal]++; //put the roll total in the array spot
             }
-            for (int i = 0; i < 12; i++) //this will print out the results from the array to the user
+            for (int i = 1; i < 12; i++) //this will print out the results from the array to the user
             {
                 Console.WriteLine((i + 1) + " : " + sumrolls[i]);
             }
@@ -45,7 +45,7 @@ namespace Mission2
             //need to set up another for loop that has an array which will add an asterik to the correct number for each time it is hit
 
 
-            Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!")
+            Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
 
 
         }
